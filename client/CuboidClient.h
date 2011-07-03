@@ -1,4 +1,3 @@
-
 #ifndef CUBOIDCLIENT_H
 #define CUBOIDCLIENT_H
 
@@ -10,96 +9,29 @@ namespace client {
   * Base client object
   */
 
-class CuboidClient : virtual public CuboidEngine
-{
+class CuboidClient : virtual public CuboidEngine {
 public:
 
-		// Constructors/Destructors
-		//  
+	/**
+	* Empty Constructor
+	*/
+	CuboidClient();
+
+	/**
+	* Empty Destructor
+	*/
+	virtual ~CuboidClient();
 
 
-		/**
-		 * Empty Constructor
-		 */
-		CuboidClient ( );
-
-		/**
-		 * Empty Destructor
-		 */
-		virtual ~CuboidClient ( );
-
-		// Static Public attributes
-		//  
-
-		// Public attributes
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-
-		/**
-		 */
-		void doTick ( )
-		{
-		}
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
-private:
-
-		// Static Private attributes
-		//  
-
-		// Private attributes
-		//  
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-
+	/**
+	*/
+	void doTick();
+	
+	ostream& sout;
+	
+	void fatalError(const char* SubSys, const char* Msg);
+	void print(const char* Msg);
+	void printMsg(const char* Msg);
 
 };
 }; // end of package namespace

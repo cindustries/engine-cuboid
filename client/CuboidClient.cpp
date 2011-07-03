@@ -2,25 +2,26 @@
 namespace client {
 
 
-// Constructors/Destructors
-//  
+CuboidClient::CuboidClient() : sout(std::cout) {}
 
-CuboidClient::CuboidClient ( ) {
+CuboidClient::~CuboidClient() {}
+
+void CuboidClient::doTick() {}
+
+void CuboidClient::fatalError(const char* SubSys, const char* Msg) {
+	sout << "Fatal Error [" << SubSys << "] " << Msg << endl;
+	exit(-1);
 }
 
-CuboidClient::~CuboidClient ( ) { }
+void CuboidClient::print(const char* Msg) {
+	sout << Msg << endl; //FIXME reroute to console
+}
 
-//  
-// Methods
-//  
-
-
-// Accessor methods
-//  
+void CuboidClient::printMsg(const char* Msg) {
+	//FIXME display GUI popup
+}
 
 
-// Other methods
-//  
 
 
 };
