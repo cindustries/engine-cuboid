@@ -29,16 +29,21 @@ public:
 	void fatalError(const char* SubSys, const char* Reason);
 	void print(const char* Msg);
 	void printMsg(const char* Msg);
-	void addClient( Client* client );
+	void addClient( Client* client ); //called upon connection
 	void disconnectClient( int clientID );
+	
+	ConCmdManager cmdMgr;
+	ConVarStorage confMgr;
+	
+	std::ostream& sout;
 	
 private:
 	
 	vector<PhysWorld*> world;
 	vector<Client*> clients;
 	NetworkController* netController;
-	ConCmdManager cmdMgr;
-	ConVarStorage confMgr;
+	
+	int tickNum;
 
 };
 

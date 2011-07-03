@@ -35,6 +35,8 @@ public:
 	int    getVarI(string Name);
 	float  getVarF(string Name);
 	
+	bool varExists(string Name);
+	
 private:
 	
 	map<string,string> varList;

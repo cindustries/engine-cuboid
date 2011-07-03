@@ -14,9 +14,11 @@ public:
 	~NetworkController();
 	
 	void doTick();
+	void disconnectPeer(ENetPeer* peer);
     
 private:
 	void initEnet();
+	void processPacket(ENetPacket* packet);
 	CuboidServer* root;
 	ENetAddress enetAddress;
 	ENetHost* enetHost;

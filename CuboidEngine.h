@@ -1,6 +1,9 @@
 #ifndef CUBOIDENGINE_H
 #define CUBOIDENGINE_H
 
+#include <iostream>
+#include <sstream>
+
 /**
   * class CuboidEngine
   *

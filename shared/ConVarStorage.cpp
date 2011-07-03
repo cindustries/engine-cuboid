@@ -11,6 +11,11 @@ ConVarStorage::~ConVarStorage() {
 	varList.clear();
 }
 
+bool ConVarStorage::varExists(string Name) {
+	return (varList.count(Name) == 1) ? true : false;
+}
+
+
 //get vars
 
 string ConVarStorage::getVarS(string Name) {

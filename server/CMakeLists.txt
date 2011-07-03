@@ -1,2 +1,2 @@
 add_library(cuboid_server_lib NetworkController.cpp Client.cpp PhysWorld.cpp CuboidServer.cpp)
-target_link_libraries(cuboid_server_lib BulletDynamics BulletCollision LinearMath enet)
+target_link_libraries(cuboid_server_lib cuboid_shared_lib BulletDynamics BulletCollision LinearMath enet)

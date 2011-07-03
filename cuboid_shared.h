@@ -4,10 +4,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 #include "CuboidEngine.h"
 #include "shared/shared.h"
 
+typedef unsigned char uchar;
 using namespace std;
 
 #endif

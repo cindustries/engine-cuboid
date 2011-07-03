@@ -8,3 +8,5 @@ class NetPacketProcessor;
 
 #include "ConCmdManager.h"
 #include "ConVarStorage.h"
+#include "NetPacketStringR.h"
+#include "NetPacketStringW.h"

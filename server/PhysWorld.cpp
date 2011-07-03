@@ -36,6 +36,10 @@ void PhysWorld::initBullet(){
 	
 }
 
+void PhysWorld::doTick() {
+	physDynamicsWorld->stepSimulation(1); //TODO wtf is timeStep?
+}
+
 
 
 };

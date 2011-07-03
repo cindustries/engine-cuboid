@@ -21,6 +21,7 @@ public:
 	
 	//physical control
 	void setGravityMagnitude(float Gravity);
+	void doTick();
 	
 private:
 	

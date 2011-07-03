@@ -1,0 +1,1 @@
+add_library(cuboid_shared_lib NetPacketStringW.cpp NetPacketStringR.cpp ConVarStorage.cpp ConCmdManager.cpp)
