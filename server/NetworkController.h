@@ -12,6 +12,8 @@ public:
 	//we _NEED_ a root engine, or this cannot function - hence no empty constructor
 	NetworkController(CuboidServer* ParentEngine);
 	~NetworkController();
+	
+	void doTick();
     
 private:
 	void initEnet();

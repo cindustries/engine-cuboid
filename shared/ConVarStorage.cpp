@@ -1,23 +1,50 @@
 #include "ConVarStorage.h"
+#include "cuboid_shared.h"
+#include <cstdlib>
+#include <sstream> //for converting int/float to string
 
-// Constructors/Destructors
-//  
 
-ConVarStorage::ConVarStorage ( ) {
+namespace shared {
+ConVarStorage::ConVarStorage() {}
+
+ConVarStorage::~ConVarStorage() {
+	varList.clear();
 }
 
-ConVarStorage::~ConVarStorage ( ) { }
+//get vars
 
-//  
-// Methods
-//  
+string ConVarStorage::getVarS(string Name) {
+	if( varList.count(Name) == 1 ){
+		return varList[Name];
+	}else{
+		return string();
+	}
+}
 
+int ConVarStorage::getVarI(string Name) {
+	return atoi( getVarS(Name).c_str() );
+}
 
-// Accessor methods
-//  
+float ConVarStorage::getVarF(string Name) {
+	return atof( getVarS(Name).c_str() );
+}
 
+//set vars
 
-// Other methods
-//  
+void ConVarStorage::setVarS(string Name, string Value) {
+	varList[Name] = Value;
+}
 
+void ConVarStorage::setVarI(string Name, int Value) {
+	stringstream tmp;
+	tmp << Value;
+	varList[Name] = tmp.out;
+}
 
+void ConVarStorage::setVarF(string Name, float Value) {
+	stringstream tmp;
+	tmp << Value;
+	varList[Name] = tmp.out;
+}
+
+};

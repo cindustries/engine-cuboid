@@ -1,8 +1,7 @@
 #ifndef _CUBOID_CLIENT_H_
 #define _CUBOID_CLIENT_H_
 
-#include <iostream>
-#include <vector>
+#include "cuboid_shared.h"
 
 extern "C" {
 #include <SDL/SDL.h>
@@ -14,8 +13,6 @@ extern "C" {
 #include "agar/gui/sdl.h"
 };
 
-#include "CuboidEngine.h"
-#include "shared/shared.h"
 #include "client/client.h"
 
 using namespace std;

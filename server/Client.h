@@ -1,98 +1,53 @@
 
 #ifndef CLIENT_H
 #define CLIENT_H
+#include <enet/enet.h>
+#include "net_protocol.h"
 
 namespace server {
-
+using namespace std;
+using namespace shared;
 
 /**
   * class Client
   * 
   */
 
-class Client
-{
-public:
-
-		// Constructors/Destructors
-		//  
-
-
-		/**
-		 * Empty Constructor
-		 */
-		Client ( );
-
-		/**
-		 * Empty Destructor
-		 */
-		virtual ~Client ( );
-
-		// Static Public attributes
-		//  
-
-		// Public attributes
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
+class Client {
+friend class CuboidServer;
+friend class NetworkController;
 public:
 
 
-		// Protected attribute accessor methods
-		//  
+	/**
+	* Empty Constructor
+	*/
+	Client(CuboidServer* serverRoot, int ID, ENetPeer* peer, string name);
 
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
+	/**
+	* Empty Destructor
+	*/
+	virtual ~Client();
+	
+	int getID();
+	string getName();
 private:
-
-		// Static Private attributes
-		//  
-
-		// Private attributes
-		//  
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-
+	
+	int ID;
+	ENetPeer* enetPeer;
+	
+	CuboidServer* root;
+	ConnectionState connState;
+	
+	
+	string name;
+	
+	//some attributes TODO
+	// Entity* playerEnt;
+	int health;
+	int weapon;
+	int ammo;
+	
 
 };
 }; // end of package namespace

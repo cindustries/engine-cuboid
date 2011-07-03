@@ -27,11 +27,18 @@ public:
 	
 	void doTick();
 	void fatalError(const char* SubSys, const char* Reason);
+	void print(const char* Msg);
+	void printMsg(const char* Msg);
+	void addClient( Client* client );
+	void disconnectClient( int clientID );
+	
 private:
 	
-	PhysWorld* world;
+	vector<PhysWorld*> world;
 	vector<Client*> clients;
 	NetworkController* netController;
+	ConCmdManager cmdMgr;
+	ConVarStorage confMgr;
 
 };
 

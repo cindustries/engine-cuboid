@@ -2,6 +2,7 @@
 #define _CUBOID_SHARED_H_
 
 #include <iostream>
+#include <string>
 #include <vector>
 
 #include "CuboidEngine.h"

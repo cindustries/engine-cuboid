@@ -3,97 +3,36 @@
 #define CONCMDMANAGER_H
 
 #include <string>
+#include <map>
 
 namespace shared {
-
+using namespace std;
 
 /**
   * class ConCmdManager
   * 
   */
 
-class ConCmdManager
-{
+class ConCmdManager {
 public:
 
-		// Constructors/Destructors
-		//  
+	/**
+	* Empty Constructor
+	*/
+	ConCmdManager();
 
-
-		/**
-		 * Empty Constructor
-		 */
-		ConCmdManager ( );
-
-		/**
-		 * Empty Destructor
-		 */
-		virtual ~ConCmdManager ( );
-
-		// Static Public attributes
-		//  
-
-		// Public attributes
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
+	/**
+	* Empty Destructor
+	*/
+	virtual ~ConCmdManager();
+	
+	void execCommand(string Cmd);
+	void setCommandCallback(string CmdName, void*callbackFunc(string,vector<string>)); //calls: callbackFunc( string CmdName, string Arguments );
+	void delCommand(string CmdName);
+	
 private:
-
-		// Static Private attributes
-		//  
-
-		// Private attributes
-		//  
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
+	map<string, void (*)(string,vector<string>)> cmdList;
+	
 
 
 };

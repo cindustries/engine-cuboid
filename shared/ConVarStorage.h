@@ -1,100 +1,43 @@
 
 #ifndef CONVARSTORAGE_H
 #define CONVARSTORAGE_H
-
 #include <string>
+#include <map>
 
 namespace shared {
-
+using namespace std;
 
 /**
   * class ConVarStorage
   * 
   */
 
-class ConVarStorage
-{
-public:
-
-		// Constructors/Destructors
-		//  
-
-
-		/**
-		 * Empty Constructor
-		 */
-		ConVarStorage ( );
-
-		/**
-		 * Empty Destructor
-		 */
-		virtual ~ConVarStorage ( );
-
-		// Static Public attributes
-		//  
-
-		// Public attributes
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-		// Public attribute accessor methods
-		//  
-
-
-protected:
-
-		// Static Protected attributes
-		//  
-
-		// Protected attributes
-		//  
-
+class ConVarStorage {
+	
 public:
 
 
-		// Protected attribute accessor methods
-		//  
+	/**
+	* Empty Constructor
+	*/
+	ConVarStorage();
 
-protected:
-
-public:
-
-
-		// Protected attribute accessor methods
-		//  
-
-protected:
-
-
+	/**
+	* Empty Destructor
+	*/
+	virtual ~ConVarStorage();
+	
+	void setVarS(string Name, string Value);
+	void setVarI(string Name, int    Value);
+	void setVarF(string Name, float  Value);
+	
+	string getVarS(string Name);
+	int    getVarI(string Name);
+	float  getVarF(string Name);
+	
 private:
-
-		// Static Private attributes
-		//  
-
-		// Private attributes
-		//  
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-public:
-
-
-		// Private attribute accessor methods
-		//  
-
-private:
-
-
+	
+	map<string,string> varList;
 
 };
 }; // end of package namespace
