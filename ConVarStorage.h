@@ -4,7 +4,6 @@
 #include <string>
 #include <map>
 
-namespace shared {
 using namespace std;
 
 /**
@@ -16,15 +15,7 @@ class ConVarStorage {
 	
 public:
 
-
-	/**
-	* Empty Constructor
-	*/
 	ConVarStorage();
-
-	/**
-	* Empty Destructor
-	*/
 	virtual ~ConVarStorage();
 	
 	void setVarS(string Name, string Value);
@@ -42,6 +33,5 @@ private:
 	map<string,string> varList;
 
 };
-}; // end of package namespace
 
 #endif // CONVARSTORAGE_H

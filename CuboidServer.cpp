@@ -1,8 +1,8 @@
 #include "CuboidServer.h"
 #include "cuboid_server.h"
 #include <algorithm>
+#include <vector>
 
-namespace server {
 
 CuboidServer::CuboidServer() :
 	netController( new NetworkController(this) ),
@@ -39,11 +39,10 @@ void CuboidServer::printMsg(const char* Msg) {
 }
 
 
-void CuboidServer::addClient(Client* client) {
+/*void CuboidServer::addClient(Client* client) {
 	clients.push_back(client);
-}
+}*/
 
 void CuboidServer::disconnectClient(int clientID) {}
 	//do some cleanup stuff, notify other clients, etc
 	
-};

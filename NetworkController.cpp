@@ -1,11 +1,9 @@
 #include "NetworkController.h"
 #include "cuboid_server.h"
 #include "enet/enet.h"
-#include "CuboidServer.h"
 #include <sstream>
 
-namespace server {
-using namespace shared;
+
 
 NetworkController::NetworkController(CuboidServer* ParentEngine) :
 	root(ParentEngine)
@@ -71,16 +69,15 @@ void NetworkController::initEnet() {
 
 void NetworkController::processPacket(ENetPacket* packet) {
 	uchar* data = packet->data;
-	CuboidNetProtocol type = (CuboidNetProtocol)data[0];
-	if(type == NET_REQUEST_JOIN){
+	CuboidNetProtocol type = static_cast<CuboidNetProtocol>(data[0]);
+	//TODO packet processing
+	/*if(type == NET_REQUEST_JOIN){
 		string name;
 		//string format is it's length followed by the string of chars
 		name.copy( (char*)&data[2], (size_t)data[1] );
 		root->sout << "Recieved NET_REQUEST_JOIN with name " << name << endl;
 	}else{
 		root->sout << "Recieved unknown packet." << endl;
-	}
+	}*/
 
 }
-
-};

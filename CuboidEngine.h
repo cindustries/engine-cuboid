@@ -4,19 +4,14 @@
 #include <iostream>
 #include <sstream>
 
-/**
-  * class CuboidEngine
-  *
-  */
 
 class CuboidEngine {
 public:
 
-	static const int VERSION;
+	virtual ~CuboidEngine();
 
-	/**
-	 * To be implemented - does an engine tick.
-	 */
+	const static int VERSION;
+
 	virtual void doTick() = 0;
 	virtual void fatalError(const char* SubSys, const char* Reason) = 0;
 	virtual void print(const char* Msg) = 0;

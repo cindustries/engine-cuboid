@@ -3,8 +3,6 @@
 #include "cuboid_server.h"
 #include "btBulletDynamicsCommon.h"
 
-namespace server {
-
 
 /**
   * class PhysWorld
@@ -37,7 +35,5 @@ private:
 	btDiscreteDynamicsWorld* physDynamicsWorld;
 	
 };
-
-}; // end of package namespace
 
 #endif // PHYSWORLD_H

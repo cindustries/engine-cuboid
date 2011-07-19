@@ -3,8 +3,8 @@
 #include <cstdlib>
 #include <sstream> //for converting int/float to string
 
+using namespace std;
 
-namespace shared {
 ConVarStorage::ConVarStorage() {}
 
 ConVarStorage::~ConVarStorage() {
@@ -51,5 +51,3 @@ void ConVarStorage::setVarF(string Name, float Value) {
 	tmp << Value;
 	varList[Name] = tmp.out;
 }
-
-};

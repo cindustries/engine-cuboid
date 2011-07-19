@@ -1,8 +1,5 @@
-#include "cuboid_server.h"
-#include "btBulletDynamicsCommon.h"
 #include "PhysWorld.h"
-
-namespace server {
+#include "cuboid_server.h"
 
 //constructor/destructor
 PhysWorld::PhysWorld(CuboidServer* ParentEngine) :
@@ -41,5 +38,3 @@ void PhysWorld::doTick() {
 }
 
 
-
-};

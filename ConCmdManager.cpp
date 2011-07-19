@@ -1,6 +1,8 @@
-#include "cuboid_shared.h"
+#include "ConCmdManager.h"
+#include <vector>
+#include <string>
 
-namespace shared {
+using namespace std;
 	
 ConCmdManager::ConCmdManager() {};
 
@@ -32,5 +34,4 @@ void ConCmdManager::execCommand(string Cmd) {
 }
 
 
-};
 

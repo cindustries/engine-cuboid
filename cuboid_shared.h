@@ -6,8 +6,16 @@
 #include <vector>
 #include <sstream>
 
+
+class CuboidEngine;
+class ConCmdManager;
+class ConVarStorage;
+
+#include "net_protocol.h"
+
 #include "CuboidEngine.h"
-#include "shared/shared.h"
+#include "ConCmdManager.h"
+#include "ConVarStorage.h"
 
 typedef unsigned char uchar;
 using namespace std;

@@ -3,10 +3,7 @@
 #include "cuboid_server.h"
 #include "enet/enet.h"
 
-namespace server {
-
-class NetworkController
-{
+class NetworkController {
 
 public:
 	//we _NEED_ a root engine, or this cannot function - hence no empty constructor
@@ -24,5 +21,4 @@ private:
 	ENetHost* enetHost;
 };
 
-};
 #endif // NETWORKCONTROLLER_H

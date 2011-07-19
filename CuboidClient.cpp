@@ -1,5 +1,4 @@
 #include "cuboid_client.h"
-namespace client {
 
 
 CuboidClient::CuboidClient() : sout(std::cout) {}
@@ -21,7 +20,3 @@ void CuboidClient::printMsg(const char* Msg) {
 	//FIXME display GUI popup
 }
 
-
-
-
-};

@@ -1,1 +1,0 @@
-add_library( cuboid_client_lib Camera.cpp Console.cpp CuboidClient.cpp DisplayManager.cpp EventProcessor.cpp GUIManager.cpp HUDManager.cpp )

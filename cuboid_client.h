@@ -13,8 +13,9 @@ extern "C" {
 #include "agar/gui/sdl.h"
 };
 
-#include "client/client.h"
 
-using namespace std;
+class CuboidClient;
+
+#include "CuboidClient.h"
 
 #endif
